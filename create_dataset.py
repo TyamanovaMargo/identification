@@ -2,7 +2,7 @@ import os
 import shutil
 import random
 
-genre = "without_classic"
+genre = "other_genres"
 
 def dataset_one_chunk(input_folder, output_folder=f'dataset_one_chunk_{genre}'):
     if not os.path.exists(output_folder):
@@ -87,7 +87,7 @@ def splitFiles(input_folder, output_train=f'train_{genre}', output_test=f'test_{
         shutil.copy(file_path, destination_folder)
 
 # Пример использования
-root_folder_path = "/Users/margotiamanova/Desktop/identification/result/all-chunks-separate-folders-all_books"
+root_folder_path = "/Users/margotiamanova/Desktop/identification/result/all-chunks-separate-folders-OTHER_GENRES"
 dataset_one_chunk(root_folder_path)
 extracted_files = extractFiles(f"dataset_one_chunk_{genre}")
 

@@ -45,3 +45,6 @@ def main(data_folder):
 if __name__ == "__main__":
     data_folder = input("Введите путь к папке, содержащей папки train и test: ")
     main(data_folder)
+
+
+

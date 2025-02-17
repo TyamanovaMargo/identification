@@ -9,7 +9,7 @@ def count_txt_files(directory):
     return count
 
 # Specify the path to your main folder
-main_folder_path = "/Users/margotiamanova/Desktop/identification/classic_dataset_new"
+main_folder_path = "/Users/margotiamanova/Desktop/identification/DATASET_ACTUAL _With_punctuation/romance_dataset_new"
 # Concatenate the main folder path with "train" and "test" folders
 train_folder_path = os.path.join(main_folder_path, "train")
 test_folder_path = os.path.join(main_folder_path, "test")

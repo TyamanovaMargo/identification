@@ -31,3 +31,12 @@ result/
 lib/
 .idea
 .myvenv
+
+# Игнорировать все файлы по умолчанию
+*
+
+# Но не .gitignore
+!.gitignore
+
+# Разрешить файлы .py
+!*.py
