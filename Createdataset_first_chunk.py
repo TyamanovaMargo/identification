@@ -33,7 +33,7 @@ genre = "without_novelStory"
 #                 # Записываем один чанк текста в файл
 #                 output_file_path = os.path.join(output_subfolder, file_name)
 #                 with open(output_file_path, 'w', encoding='utf-8') as output_file:
-#                     output_file.write(text)
+#                     output_file.write(text).
 
 
 def extractFiles(input_folder=f"First_Chunks_{genre}", output_folder=f'extract_files_{genre}'):
