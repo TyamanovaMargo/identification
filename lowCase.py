@@ -32,3 +32,4 @@ source_directory = '/Users/margotiamanova/Desktop/identification/DATASET_ACTUAL 
 destination_directory = '/Users/margotiamanova/Desktop/identification/romanc_lowcase_punctuation'
 
 process_directory(source_directory, destination_directory)
+#lowcase
