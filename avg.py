@@ -31,3 +31,5 @@ df = pd.DataFrame(list(genre_data.items()), columns=['Genre', 'Average Character
 df.to_excel('genre_character_counts_romance_300.xlsx', index=False)
 
 print("Данные успешно записаны в genre_character_counts.xlsx")
+
+#avrg
