@@ -18,6 +18,6 @@ test_folder_path = os.path.join(main_folder_path, "test")
 train_count = count_txt_files(train_folder_path)
 test_count = count_txt_files(test_folder_path)
 
-# Display the counts
+# Display the counts.
 print("Total number of .txt files in 'train' folder:", train_count)
 print("Total number of .txt files in 'test' folder:", test_count)
