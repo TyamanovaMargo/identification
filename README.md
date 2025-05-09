@@ -1,77 +1,72 @@
-# SONATA: Russian Book Genre Classification Dataset
+# 📚 Genre Classification of Books in Russian
 
-Welcome to the **SONATA** dataset repository! This dataset is designed for genre classification tasks of Russian books, offering a rich collection of stylometric features and book genres. It was collected from **knigogo.net**, a popular Russian-language website for audiobooks and online literature.
+A machine learning project for automatic classification of Russian-language literary texts into genres using NLP techniques.
 
-The dataset is publicly available for research and academic purposes. If you use or reference this dataset, please cite the following paper:
+## 🔍 Overview
 
-> **Vanetik, Natalia**, **Tiamanova, Margarita**, **Kogan, Genady**, **Litvak, Marina**.  
-> *Genre Classification of Books in Russian with Stylometric Features: A Case Study*.  
-> *Information*, 15(6), 340, 2024.  
+This research aims to build an automated system that classifies Russian books into genres using advanced natural language processing methods and deep learning models. A custom dataset, **ROBYN (Russian bOoks BY geNre)**, was collected and processed, enabling binary and multi-class classification tasks.
 
+## 📁 Dataset
 
----
+The dataset was built by scraping texts from [knigogo.net](https://knigogo.net), covering **11 genres**:
 
-## Dataset Overview
+- Science Fiction
+- Detective
+- Romance
+- Fantasy
+- Classic
+- Action
+- Non-Fiction
+- Contemporary Literature
+- Adventure
+- Novel and Short Stories
+- Children’s Books
 
-- **Source**: knigogo.net (a Russian-language platform for books and audiobooks)
-- **Genres Included**:  
-  1. Science Fiction  
-  2. Detective  
-  3. Romance  
-  4. Fantasy  
-  5. Classic  
-  6. Action  
-  7. Non-fiction  
-  8. Contemporary Literature  
-  9. Adventure  
-  10. Novel and Short Stories  
-  11. Children's Books
-  
-- **Total Books**: 8189 original books
-- **Total Instances**: 10444 book instances (some books belong to multiple genres)
-- **Languages**: Russian
-  
----
+**Key Stats:**
+- 📄 10,419 books (8,189 unique)
+- 🧩 507,351 text chunks (400 words each)
+- 📏 Average book length: ~20,000 words
 
-## Dataset Features
+## ⚙️ Preprocessing
 
-The dataset consists of the following:
+Text was preprocessed using Python scripts to:
+- Convert to UTF-8
+- Remove author names
+- Segment texts into 400-word chunks
+- Apply lowercase transformation (optional)
+- Preserve punctuation (boosts performance)
 
-- **Original Books**: Full books available in various formats (fb2, rtf, epub, txt).
-- **Book Chunks**: Books split into chunks of 300 words to facilitate Large Language Model (LLM) processing.
-- **Metadata**: Metadata extracted from the second line of the text (excluding authors' names).
+## 🧠 Models Used
 
----
+Two transformer-based models were evaluated:
+- **DeepPavlov (RuBERT)**
+- **Multilingual BERT (mBERT)**
 
-## Data Collection Process
+**Vectorization:** WordPiece Tokenization  
+**Embedding Visualization:** t-SNE plots to analyze clustering by genre
 
-1. **Re-Encoding**: All files were re-encoded to UTF-8 for compatibility and consistency.
-2. **Meta-Data Parsing**: The second line of each text containing meta-data (including author names) was removed.
-3. **Text Chunking**: Books were split into smaller parts (chunks of 300 words) to make them suitable for LLM processing, which has a token limit.
+## 🧪 Experiments
 
----
+- **Binary Classification**: Genre vs. non-genre
+- **Multiclass Classification**: Classify text into one of the 11 genres
+- **Evaluated using**:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-score
+  - Hamming Loss (for multilabel tasks)
 
-## How to Access
+## 📈 Results
 
-You can access the full dataset, including complete books and their corresponding chunks, via the following Google Drive repository:
+DeepPavlov with preserved punctuation performed best, achieving:
+- Strong genre separation in t-SNE plots
+- Higher accuracy than mBERT in most experiments
 
-[SONATA Dataset on Google Drive](https://drive.google.com/drive/folders/1rnpMl39yOpsYTaE6ZGzk5nHQRU2dOASB?usp=sharing)
+🚀 Applications
 
----
+    Automatic genre tagging in digital libraries
 
-## Citation
+    Enhancing book recommendation systems
 
-If you use or reference this dataset, please cite the following paper:
-
-```bibtex
-@article{vanetik2024genre,
-  title={Genre Classification of Books in Russian with Stylometric Features: A Case Study},
-  author={Vanetik, Natalia and Tiamanova, Margarita and Kogan, Genady and Litvak, Marina},
-  journal={Information},
-  volume={15},
-  number={6},
-  pages={340},
-  year={2024},
-  publisher={Multidisciplinary Digital Publishing Institute}
-}
+    Linguistic research in Russian literary studies
 
