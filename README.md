@@ -1,26 +1,77 @@
-# Identification-of-the-genre-of-books
+# SONATA: Russian Book Genre Classification Dataset
 
-Our dataset was collected from knigogo.net, a Russian-language website that provides fresh news about literature, reviews, and feedback on popular books. It contains a large selection of audiobooks and online books in formats such as fb2, rtf, epub, and txt for iPad, iPhone, Android, and Kindle.
- We name the resulting dataset SONATA for ruSsian bOoks geNre dATAset.
+Welcome to the **SONATA** dataset repository! This dataset is designed for genre classification tasks of Russian books, offering a rich collection of stylometric features and book genres. It was collected from **knigogo.net**, a popular Russian-language website for audiobooks and online literature.
 
-As a result, 11 genres were selected for the dataset: Science Fiction, Detective, Romance, Fantasy, Classic, Action, Non-fiction, Contemporary Literature, Adventure, Novel and Short stories, and Children's books. In non-fiction, we encompassed all genres that do not belong to fiction literature.
-The total of 8189 original books were downloaded. However, because some books belong to multiple genres, the total amount of book instances is 10444. 
+The dataset is publicly available for research and academic purposes. If you use or reference this dataset, please cite the following paper:
 
-During the processing, we have applied the following steps: (1) using a custom Python script we re-encoded the files into a UTF-8 format; (2) we parsed the second line of text containing the meta-data and removed the authors' names; (3) finally, we extract books without author names and split  them into small parts (chunks) of 300 words each to allow for LLM processing that has a limit on number of tokens.
+> **Vanetik, Natalia**, **Tiamanova, Margarita**, **Kogan, Genady**, **Litvak, Marina**.  
+> *Genre Classification of Books in Russian with Stylometric Features: A Case Study*.  
+> *Information*, 15(6), 340, 2024.  
+> [DOI Link](https://doi.org/10.3390/info15060340)
 
-The set of complete books and book chunks is available at the following google drive repository (due to its size):
+---
 
-# https://drive.google.com/drive/folders/1rnpMl39yOpsYTaE6ZGzk5nHQRU2dOASB?usp=sharing
+## Dataset Overview
 
-Pythons script used for data collection is provided in downloadBooks_knigogo.py
+- **Source**: knigogo.net (a Russian-language platform for books and audiobooks)
+- **Genres Included**:  
+  1. Science Fiction  
+  2. Detective  
+  3. Romance  
+  4. Fantasy  
+  5. Classic  
+  6. Action  
+  7. Non-fiction  
+  8. Contemporary Literature  
+  9. Adventure  
+  10. Novel and Short Stories  
+  11. Children's Books
+  
+- **Total Books**: 8189 original books
+- **Total Instances**: 10444 book instances (some books belong to multiple genres)
+- **Languages**: Russian
+  
+---
 
-The dataset is descibed and evaluated in the paper:
+## Dataset Features
 
-Genre Classification of Books in Russian with Stylometric Features: a Case Study,
-Natalia Vanetik, Margarita Tiamanova, Genady Kogan, Marina Litvak,
+The dataset consists of the following:
 
-If you use or reference this dataset, please cite:
+- **Original Books**: Full books available in various formats (fb2, rtf, epub, txt).
+- **Book Chunks**: Books split into chunks of 300 words to facilitate Large Language Model (LLM) processing.
+- **Metadata**: Metadata extracted from the second line of the text (excluding authors' names).
 
+---
+
+## Data Collection Process
+
+1. **Re-Encoding**: All files were re-encoded to UTF-8 for compatibility and consistency.
+2. **Meta-Data Parsing**: The second line of each text containing meta-data (including author names) was removed.
+3. **Text Chunking**: Books were split into smaller parts (chunks of 300 words) to make them suitable for LLM processing, which has a token limit.
+
+---
+
+## How to Access
+
+You can access the full dataset, including complete books and their corresponding chunks, via the following Google Drive repository:
+
+[SONATA Dataset on Google Drive](https://drive.google.com/drive/folders/1rnpMl39yOpsYTaE6ZGzk5nHQRU2dOASB?usp=sharing)
+
+---
+
+## Scripts
+
+The dataset also includes a Python script for downloading books from knigogo.net:
+
+- **`downloadBooks_knigogo.py`**: A Python script used for data collection.
+
+---
+
+## Citation
+
+If you use or reference this dataset, please cite the following paper:
+
+```bibtex
 @article{vanetik2024genre,
   title={Genre Classification of Books in Russian with Stylometric Features: A Case Study},
   author={Vanetik, Natalia and Tiamanova, Margarita and Kogan, Genady and Litvak, Marina},
@@ -30,3 +81,5 @@ If you use or reference this dataset, please cite:
   pages={340},
   year={2024},
   publisher={Multidisciplinary Digital Publishing Institute}
+}
+
