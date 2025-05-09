@@ -7,7 +7,7 @@ The dataset is publicly available for research and academic purposes. If you use
 > **Vanetik, Natalia**, **Tiamanova, Margarita**, **Kogan, Genady**, **Litvak, Marina**.  
 > *Genre Classification of Books in Russian with Stylometric Features: A Case Study*.  
 > *Information*, 15(6), 340, 2024.  
-> [DOI Link]([https://doi.org/10.3390/info15060340](https://www.mdpi.com/2078-2489/15/6/340))
+
 
 ---
 
