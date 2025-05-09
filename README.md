@@ -59,14 +59,6 @@ You can access the full dataset, including complete books and their correspondin
 
 ---
 
-## Scripts
-
-The dataset also includes a Python script for downloading books from knigogo.net:
-
-- **`downloadBooks_knigogo.py`**: A Python script used for data collection.
-
----
-
 ## Citation
 
 If you use or reference this dataset, please cite the following paper:
